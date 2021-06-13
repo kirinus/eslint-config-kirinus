@@ -1,0 +1,42 @@
+{
+  "name": "eslint-config-monorepo",
+  "version": "0.0.1-rc.0",
+  "description": "Specific kirinus configuration for JavaScript and TypeScript projects",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config"
+  ],
+  "author": "development@kirinus.digital",
+  "main": "src/index.js",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-import-resolver-node": "^0.3.4",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-ordered-imports": "^0.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "prettier": "^2.2.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": ">= 4",
+    "@typescript-eslint/parser": ">= 4",
+    "eslint": ">= 7",
+    "eslint-plugin-eslint-comments": ">= 3",
+    "eslint-plugin-import": ">= 2",
+    "eslint-plugin-jest": ">= 24",
+    "eslint-plugin-node": ">= 11",
+    "eslint-plugin-ordered-imports": ">= 0.4",
+    "eslint-plugin-react": ">= 7",
+    "prettier": ">= 2"
+  },
+  "license": "MIT"
+}
