@@ -19,7 +19,7 @@ jobs:
           scope: '@kirinus-digital'
       - name: Publish the package
         run: |
-          npm --no-git-tag-version version $RELEASE_VERSION
+          npm --no-git-tag-version --allow-sameversion version $RELEASE_VERSION
           npm config set registry https://registry.npmjs.org
           echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
           npm publish --access public
