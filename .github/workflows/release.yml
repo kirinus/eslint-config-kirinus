@@ -16,3 +16,4 @@ jobs:
         taskPrefix: null
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
         pushTag: false
+        withV: true
