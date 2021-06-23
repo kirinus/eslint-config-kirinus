@@ -1,5 +1,5 @@
 {
-  "name": "@kirinus-digital/eslint-config-kirinus",
+  "name": "eslint-config-kirinus",
   "version": "0.0.1-rc.1",
   "description": "Specific kirinus configuration for JavaScript and TypeScript projects",
   "keywords": [
@@ -10,9 +10,13 @@
   "author": "development@kirinus.digital",
   "main": "src/index.js",
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/lint": "^12.1.4",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "danger": "^10.6.4",
+    "danger-plugin-kirinus": "^1.0.2",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-import-resolver-node": "^0.3.4",
@@ -22,7 +26,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-ordered-imports": "^0.4.1",
     "eslint-plugin-react": "^7.23.2",
-    "prettier": "^2.2.1"
+    "husky": "^6.0.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.1"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -38,6 +44,9 @@
     "eslint-plugin-ordered-imports": ">= 0.4",
     "eslint-plugin-react": ">= 7",
     "prettier": ">= 2"
+  },
+  "scripts": {
+    "prepare": "yes | yarn husky install"
   },
   "license": "MIT"
 }
