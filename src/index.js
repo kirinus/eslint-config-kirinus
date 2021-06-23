@@ -2,15 +2,16 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ["plugin:eslint-comments/recommended", "prettier"],
+  extends: ['plugin:eslint-comments/recommended', 'prettier'],
+  plugins: ['ordered-imports'],
   rules: {
     /**
      * Global style rules
      */
-    "max-len": [
-      "error",
+    'max-len': [
+      'error',
       {
-        code: 100,
+        code: 80,
         ignoreComments: true,
         ignoreRegExpLiterals: true,
         ignoreStrings: true,
@@ -20,91 +21,87 @@ module.exports = {
         tabWidth: 2,
       },
     ],
-    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-void": ["error", { allowAsStatement: true }],
-    "object-curly-spacing": [2, "always"],
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-void': ['error', { allowAsStatement: true }],
+    'object-curly-spacing': [2, 'always'],
     // See configuration in https://www.npmjs.com/package/eslint-plugin-ordered-imports#configuration
-    "ordered-imports/ordered-imports": [
-      "error",
+    'ordered-imports/ordered-imports': [
+      'error',
       {
-        "declaration-ordering": [
-          "type",
+        'declaration-ordering': [
+          'type',
           {
-            ordering: ["side-effect", "default", "namespace", "destructured"],
-            secondaryOrdering: ["source", "case-insensitive"],
+            ordering: ['side-effect', 'default', 'namespace', 'destructured'],
+            secondaryOrdering: ['source', 'case-insensitive'],
           },
         ],
-        "specifier-ordering": "lowercase-last",
-        "group-ordering": [
-          { name: "scoped libraries", match: "^@.*/", order: 20 },
-          { name: "local directories", match: "^\\.\\.?", order: 30 },
-          { name: "third party", match: ".*", order: 10 },
+        'specifier-ordering': 'lowercase-last',
+        'group-ordering': [
+          {
+            name: 'internal monorepo libraries',
+            match: '^(bot|cli|core|lib|rest|ui|utils|ws)-.*',
+            order: 20,
+          },
+          { name: 'local directories', match: '^\\.\\.?', order: 30 },
+          { name: 'third party', match: '.*', order: 10 },
         ],
       },
     ],
-    semi: ["error", "always"],
+    semi: ['error', 'always'],
   },
   overrides: [
     {
       /**
        * JavaScript rules
        */
-      files: ["**/*.js"],
-      extends: ["eslint:recommended", "plugin:node/recommended"],
+      files: ['**/*.js'],
+      extends: ['eslint:recommended', 'plugin:node/recommended'],
     },
     {
       /**
        * TypeScript rules
        */
-      files: ["**/*.ts"],
+      files: ['**/*.ts', '**/*.tsx'],
       extends: [
-        "plugin:import/typescript",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        'plugin:import/typescript',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
-      parser: require.resolve("@typescript-eslint/parser"),
-      parserOptions: {
-        sourceType: "module",
-        ecmaFeatures: {
-          modules: true,
-        },
-        project: "./tsconfig.json",
-        tsconfigRootDir: __dirname,
-      },
-      plugins: ["@typescript-eslint", "ordered-imports"],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
       rules: {
-        "@typescript-eslint/naming-convention": [
-          "error",
+        '@typescript-eslint/naming-convention': [
+          'error',
           {
-            selector: "default",
-            format: ["camelCase"],
+            selector: 'default',
+            format: ['camelCase'],
           },
           {
-            selector: "enumMember",
-            format: ["PascalCase"],
+            selector: 'enumMember',
+            format: ['PascalCase'],
           },
           {
-            selector: "parameter",
-            format: ["camelCase"],
-            leadingUnderscore: "allow",
+            selector: 'parameter',
+            format: ['camelCase'],
+            leadingUnderscore: 'allow',
           },
           {
-            selector: "typeLike",
-            format: ["PascalCase"],
+            selector: 'typeLike',
+            format: ['PascalCase'],
           },
           {
-            selector: "variable",
-            format: ["camelCase", "UPPER_CASE"],
+            selector: 'variable',
+            format: ['camelCase', 'UPPER_CASE'],
           },
         ],
-        "@typescript-eslint/no-unused-vars": [
-          "error",
-          { argsIgnorePattern: "^_+$" },
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          { argsIgnorePattern: '^_+$' },
         ],
-        "@typescript-eslint/restrict-template-expressions": [
-          "error",
+        '@typescript-eslint/restrict-template-expressions': [
+          'error',
           { allowAny: true },
         ],
       },
@@ -113,78 +110,33 @@ module.exports = {
       /**
        * Frontend rules (React)
        */
-      files: ["**/*.tsx", "!**/*.test.tsx"],
-      extends: [
-        "plugin:import/typescript",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:react/recommended",
-      ],
-      parserOptions: {
-        sourceType: "module",
-        ecmaFeatures: {
-          modules: true,
-        },
-        project: "./tsconfig.json",
-        tsconfigRootDir: __dirname,
-      },
-      plugins: ["@typescript-eslint", "ordered-imports"],
-      rules: {
-        "@typescript-eslint/naming-convention": [
-          "error",
-          {
-            selector: "default",
-            format: ["camelCase"],
-          },
-          {
-            selector: "enumMember",
-            format: ["PascalCase"],
-          },
-          {
-            selector: "function",
-            format: ["camelCase", "PascalCase"],
-          },
-          {
-            selector: "parameter",
-            format: ["camelCase"],
-            leadingUnderscore: "allow",
-          },
-          {
-            selector: "typeLike",
-            format: ["PascalCase"],
-          },
-          {
-            selector: "variable",
-            format: ["camelCase", "UPPER_CASE"],
-          },
-        ],
-        "@typescript-eslint/no-unsafe-call": "off",
-        "@typescript-eslint/no-unsafe-member-access": "off",
-      },
+      files: ['**/*.tsx', '!**/*.test.tsx'],
+      extends: ['plugin:react/recommended'],
+      plugins: ['react'],
+      rules: {},
     },
     {
       /**
        * Jest rules
        */
       files: [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/test/**/*.{j,t}s?(x)",
-        "**/*.test.tsx",
-        "**/{unit,integration}/setup.ts",
+        '**/__tests__/*.{j,t}s?(x)',
+        '**/test/**/*.{j,t}s?(x)',
+        '**/*.test.tsx',
+        '**/{unit,integration}/setup.ts',
       ],
-      plugins: ["jest"],
-      extends: ["plugin:jest/recommended"],
+      plugins: ['jest'],
+      extends: ['plugin:jest/recommended'],
       env: {
         jest: true,
       },
       rules: {
-        "@typescript-eslint/no-unsafe-call": "off",
-        "@typescript-eslint/no-unsafe-member-access": "off",
-        "jest/expect-expect": [
-          "error",
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        'jest/expect-expect': [
+          'error',
           {
-            assertFunctionNames: ["expect", "request.*.expect"],
+            assertFunctionNames: ['expect', 'request.*.expect'],
           },
         ],
       },
@@ -193,17 +145,13 @@ module.exports = {
       /**
        * JavaScript configuration file rules
        */
-      files: [
-        "**/*.config.{j,t}s?(x)",
-        "**/.eslintrc.js",
-        "**/typedoc.js",
-      ],
+      files: ['**/*.config.{j,t}s?(x)', '**/.eslintrc.js', '**/typedoc.js'],
       rules: {
-        "@typescript-eslint/no-unsafe-assignment": "off",
-        "@typescript-eslint/no-var-requires": "off",
-        "node/no-extraneous-require": "off",
-        "node/no-unpublished-require": "off",
-        "prefer-const": "off",
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        'node/no-extraneous-require': 'off',
+        'node/no-unpublished-require': 'off',
+        'prefer-const': 'off',
       },
     },
   ],
