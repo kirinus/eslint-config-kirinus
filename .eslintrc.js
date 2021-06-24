@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['./src/index.js'],
+  extends: './index.js',
   parserOptions: {
     project: './tsconfig.json',
   },
