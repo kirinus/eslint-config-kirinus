@@ -13,37 +13,48 @@
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@commitlint/lint": "^12.1.4",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
     "danger": "^10.6.4",
     "danger-plugin-kirinus": "^1.0.2",
     "eslint": "^7.24.0",
-    "eslint-config-prettier": "^8.2.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.3.5",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-ordered-imports": "^0.4.1",
+    "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.1"
+    "pretty-quick": "^3.1.1",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint-config-prettier": "^8.3.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "tslint-config-prettier": "^1.18.0"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">= 4",
-    "@typescript-eslint/parser": ">= 4",
     "eslint": ">= 7",
     "eslint-plugin-eslint-comments": ">= 3",
     "eslint-plugin-import": ">= 2",
-    "eslint-plugin-jest": ">= 24",
     "eslint-plugin-node": ">= 11",
     "eslint-plugin-ordered-imports": ">= 0.4",
+    "eslint-plugin-promise": ">= 5"
+  },
+  "optionalDependencies": {
+    "@typescript-eslint/eslint-plugin": ">= 4",
+    "eslint-plugin-jest": ">= 24",
+    "eslint-plugin-jsx-a11y": ">= 6",
     "eslint-plugin-react": ">= 7",
-    "prettier": ">= 2"
+    "eslint-plugin-react-hooks": ">= 4"
   },
   "scripts": {
     "prepare": "yes | yarn husky install"

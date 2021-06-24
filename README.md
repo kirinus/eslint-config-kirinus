@@ -157,6 +157,12 @@ Run the following script:
 yarn eslint .
 ```
 
+or
+
+```bash
+npx eslint .
+```
+
 ESLint will lint all relevant JS and TS files within the current folder, and output results.
 
 Most IDEs via a ESLint plugin will also give these results.

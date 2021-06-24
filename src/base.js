@@ -8,6 +8,9 @@ module.exports = {
     'plugin:ordered-imports/recommended',
     'prettier',
     'promise',
+    'eslint-config-prettier',
+    'stylelint-config-prettier',
+    'tslint-config-prettier',
   ],
   plugins: ['eslint-comments', 'import', 'ordered-imports', 'promise'],
   rules: {
