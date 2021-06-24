@@ -1,8 +1,9 @@
 global:
   values:
+    public: true
     release:
       draft: true
   workflows:
-  - file: pr.yml
-  - file: npm-publish.yml
-  - file: release.yml
+    - file: pr.yml
+    - file: publish.yml
+    - file: release.yml
