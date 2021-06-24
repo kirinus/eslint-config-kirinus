@@ -68,6 +68,8 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
         'node/no-extraneous-require': 'off',
         'node/no-unpublished-require': 'off',
         'prefer-const': 'off',
