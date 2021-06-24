@@ -7,13 +7,19 @@ Specific kirinus configuration for JavaScript and TypeScript projects
 ### 1. Install [ESLint](http://eslint.org)
 
 ```sh
-npm i eslint --save-dev
+# npm
+npm install eslint --save-dev
+# yarn
+yarn add eslint --save
 ```
 
 ### 2. Install `eslint-config-kirinus`
 
 ```sh
+# npm
 npm install eslint-config-kirinus --save-dev
+# yarn
+yarn add eslint-config-kirinus --save
 ```
 
 ### 3. Install required ESLint Plugins and configure
@@ -21,12 +27,20 @@ npm install eslint-config-kirinus --save-dev
 All configurations inherit from some base rules. Therefore these plugins are always required.
 
 ```sh
+# npm
 npm install eslint-plugin-eslint-comments \
             eslint-plugin-import \
             eslint-plugin-node \
             eslint-plugin-ordered-imports \
             eslint-plugin-promise \
             --save-dev
+# yarn
+yarn add eslint-plugin-eslint-comments \
+         eslint-plugin-import \
+         eslint-plugin-node \
+         eslint-plugin-ordered-imports \
+         eslint-plugin-promise \
+         --dev
 ```
 
 #### JavaScript
@@ -57,8 +71,12 @@ Lints JavaScript/TypeScript test files with the following globs.
 It requires the following additional plugin:
 
 ```sh
+# npm
 npm install eslint-plugin-jest \
             --save-dev
+# yarn
+yarn add eslint-plugin-jest \
+         --dev
 ```
 
 To add this configuration:
