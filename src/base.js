@@ -9,7 +9,6 @@ module.exports = {
     'plugin:unicorn/recommended',
     'prettier',
     'promise',
-    'eslint-config-prettier',
     'stylelint-config-prettier',
     'tslint-config-prettier',
   ],

@@ -1,6 +1,38 @@
 # eslint-config-kirinus
 
-Specific kirinus configuration for JavaScript and TypeScript projects
+Specific kirinus configuration for JavaScript and TypeScript projects.
+
+It applies the `recommended` rules from:
+
+- [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments)
+- [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
+- [eslint-plugin-ordered-imports](https://www.npmjs.com/package/eslint-plugin-ordered-imports)
+- [eslint-plugin-promise](https://www.npmjs.com/package/eslint-plugin-promise)
+- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- [stylelint-config-prettier](https://www.npmjs.com/package/stylelint-config-prettier)
+- [tslint-config-prettier](https://www.npmjs.com/package/tslint-config-prettier)
+
+Therefore, these lint rules will be compatible with your prettier workflow, and won't collide when
+running prettier commands.
+
+In addition, the following `recommended` rules can be enabled on demand. By default, when extending
+from `kirinus` directly, all will be enabled.
+
+- JavaScript
+  - [eslint](https://www.npmjs.com/package/eslint)
+- Jest
+  - [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest)
+- React
+  - [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
+  - [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
+  - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+- TypeScript
+  - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
+    - `typescript`
+  - [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
+    - `eslint-recommended`
+    - `recommended`
+    - `recommended-requiring-type-checking`
 
 ## Configuration
 
