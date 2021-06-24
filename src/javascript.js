@@ -1,4 +1,9 @@
 module.exports = {
-  extends: ['eslint:recommended', require.resolve('./base.js')],
-  files: ['**/*.js'],
+  extends: [require.resolve('./base.js')],
+  overrides: [
+    {
+      extends: ['eslint:recommended'],
+      files: ['**/*.js'],
+    },
+  ],
 };

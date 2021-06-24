@@ -4,13 +4,12 @@ Specific kirinus configuration for JavaScript and TypeScript projects.
 
 It applies the `recommended` rules from:
 
+- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier)
 - [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments)
 - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
 - [eslint-plugin-ordered-imports](https://www.npmjs.com/package/eslint-plugin-ordered-imports)
 - [eslint-plugin-promise](https://www.npmjs.com/package/eslint-plugin-promise)
 - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
-- [stylelint-config-prettier](https://www.npmjs.com/package/stylelint-config-prettier)
-- [tslint-config-prettier](https://www.npmjs.com/package/tslint-config-prettier)
 
 Therefore, these lint rules will be compatible with your prettier workflow, and won't collide when
 running prettier commands.
