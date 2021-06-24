@@ -42,19 +42,17 @@
     "node": ">=0.10.0"
   },
   "peerDependencies": {
-    "eslint": ">= 7",
+    "@typescript-eslint/eslint-plugin": ">= 4",
     "eslint-plugin-eslint-comments": ">= 3",
     "eslint-plugin-import": ">= 2",
-    "eslint-plugin-node": ">= 11",
-    "eslint-plugin-ordered-imports": ">= 0.4",
-    "eslint-plugin-promise": ">= 5"
-  },
-  "optionalDependencies": {
-    "@typescript-eslint/eslint-plugin": ">= 4",
     "eslint-plugin-jest": ">= 24",
     "eslint-plugin-jsx-a11y": ">= 6",
+    "eslint-plugin-node": ">= 11",
+    "eslint-plugin-ordered-imports": ">= 0.4",
+    "eslint-plugin-promise": ">= 5",
+    "eslint-plugin-react-hooks": ">= 4",
     "eslint-plugin-react": ">= 7",
-    "eslint-plugin-react-hooks": ">= 4"
+    "eslint": ">= 7"
   },
   "scripts": {
     "prepare": "yes | yarn husky install"

@@ -76,10 +76,16 @@ Lints `.tsx` and `.jsx` React files that are no tests.
 It requires the following additional plugins:
 
 ```sh
+# npm
 npm install eslint-plugin-jsx-a11y \
             eslint-plugin-react \
             eslint-plugin-react-hooks \
             --save-dev
+# yarn
+yarn add eslint-plugin-jsx-a11y \
+         eslint-plugin-react \
+         eslint-plugin-react-hooks \
+         --dev
 ```
 
 To add this configuration:
@@ -97,8 +103,12 @@ Lints `.ts` and `.tsx` Files.
 It requires the following additional plugin:
 
 ```sh
+# npm
 npm install @typescript-eslint/eslint-plugin \
             --save-dev
+# yarn
+yarn add @typescript-eslint/eslint-plugin \
+         --dev
 ```
 
 To add this configuration, you need to define your TypeScript config.
@@ -121,6 +131,7 @@ For example:
 If you just want to use all the rules (ideally for a monorepo setup):
 
 ```sh
+# npm
 npm install eslint-plugin-eslint-comments \
             eslint-plugin-import \
             eslint-plugin-node \
@@ -132,6 +143,18 @@ npm install eslint-plugin-eslint-comments \
             eslint-plugin-react-hooks \
             @typescript-eslint/eslint-plugin \
             --save-dev
+# yarn
+yarn add eslint-plugin-eslint-comments \
+         eslint-plugin-import \
+         eslint-plugin-node \
+         eslint-plugin-ordered-imports \
+         eslint-plugin-promise \
+         eslint-plugin-jest \
+         eslint-plugin-jsx-a11y \
+         eslint-plugin-react \
+         eslint-plugin-react-hooks \
+         @typescript-eslint/eslint-plugin \
+         --dev
 ```
 
 and
@@ -154,13 +177,10 @@ It will always use the TypeScript configuration of the package to be linted.
 Run the following script:
 
 ```bash
-yarn eslint .
-```
-
-or
-
-```bash
+# npm
 npx eslint .
+# yarn
+yarn eslint .
 ```
 
 ESLint will lint all relevant JS and TS files within the current folder, and output results.
