@@ -53,7 +53,7 @@
     "eslint-plugin-promise": ">= 5",
     "eslint-plugin-react": ">= 7",
     "eslint-plugin-react-hooks": ">= 4",
-    "eslint-plugin-unicorn": ">= 33"
+    "eslint-plugin-unicorn": ">= 33.0.1"
   },
   "scripts": {
     "build": "echo 'Not needed'",
