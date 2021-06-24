@@ -6,13 +6,20 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:import/recommended',
     'plugin:ordered-imports/recommended',
+    'plugin:unicorn/recommended',
     'prettier',
     'promise',
     'eslint-config-prettier',
     'stylelint-config-prettier',
     'tslint-config-prettier',
   ],
-  plugins: ['eslint-comments', 'import', 'ordered-imports', 'promise'],
+  plugins: [
+    'eslint-comments',
+    'import',
+    'ordered-imports',
+    'promise',
+    'unicorn',
+  ],
   rules: {
     /**
      * Global style rules

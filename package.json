@@ -27,6 +27,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unicorn": "^33.0.1",
     "husky": "^6.0.0",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.1",
@@ -43,6 +44,7 @@
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">= 4",
+    "eslint": ">= 7",
     "eslint-plugin-eslint-comments": ">= 3",
     "eslint-plugin-import": ">= 2",
     "eslint-plugin-jest": ">= 24",
@@ -50,11 +52,12 @@
     "eslint-plugin-node": ">= 11",
     "eslint-plugin-ordered-imports": ">= 0.4",
     "eslint-plugin-promise": ">= 5",
-    "eslint-plugin-react-hooks": ">= 4",
     "eslint-plugin-react": ">= 7",
-    "eslint": ">= 7"
+    "eslint-plugin-react-hooks": ">= 4",
+    "eslint-plugin-unicorn": ">= 33"
   },
   "scripts": {
+    "build": "echo 'Not needed'",
     "prepare": "yes | yarn husky install"
   },
   "license": "MIT"

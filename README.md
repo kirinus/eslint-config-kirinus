@@ -33,6 +33,7 @@ npm install eslint-plugin-eslint-comments \
             eslint-plugin-node \
             eslint-plugin-ordered-imports \
             eslint-plugin-promise \
+            eslint-plugin-unicorn \
             --save-dev
 # yarn
 yarn add eslint-plugin-eslint-comments \
@@ -40,6 +41,7 @@ yarn add eslint-plugin-eslint-comments \
          eslint-plugin-node \
          eslint-plugin-ordered-imports \
          eslint-plugin-promise \
+         eslint-plugin-unicorn \
          --dev
 ```
 
