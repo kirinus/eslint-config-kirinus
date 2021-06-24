@@ -262,34 +262,3 @@ parserOptions: {
 +  project: './tsconfig.eslint.json',
 }
 ```
-
-## Features
-
-### Import ordering
-
-This eslint configuration enforces order of imports in the JS and TS files, using [eslint-plugin-ordered-imports](https://www.npmjs.com/package/eslint-plugin-ordered-imports)
-recommended rules with a small modification in the grouping to support monorepos.
-
-```js
-'ordered-imports/ordered-imports': [
-  'error',
-  {
-    'group-ordering': [
-      {
-        name: 'internal monorepo libraries',
-        match: '^(bot|cli|core|lib|rest|ui|utils|ws)-.*',
-        order: 20,
-      },
-      { name: 'project root', match: '^[@|~]/', order: 20 },
-      { name: 'parent directories', match: '^\\.\\.', order: 30 },
-      { name: 'current directory', match: '^\\.', order: 40 },
-      { name: 'third party', match: '.*', order: 10 },
-    ],
-  },
-],
-```
-
-In the order `20`, it accepts imports like `@/my/import` and `~/my/import`, that are common ways
-of referencing the root of the package in the JS world. In addition, imports that start with
-`bot-`, `core-`, `lib-` are also grouped at a second level, because it is a convention used in
-Kirinus to prefix packages in a monorepo.

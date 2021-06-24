@@ -41,23 +41,6 @@ module.exports = {
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
         'no-void': ['error', { allowAsStatement: true }],
         'object-curly-spacing': [2, 'always'],
-        // See configuration in https://www.npmjs.com/package/eslint-plugin-ordered-imports#configuration
-        'ordered-imports/ordered-imports': [
-          'error',
-          {
-            'group-ordering': [
-              {
-                name: 'internal monorepo libraries',
-                match: '^(bot|cli|core|lib|rest|ui|utils|ws)-.*',
-                order: 20,
-              },
-              { name: 'project root', match: '^[@|~]/', order: 20 },
-              { name: 'parent directories', match: '^\\.\\.', order: 30 },
-              { name: 'current directory', match: '^\\.', order: 40 },
-              { name: 'third party', match: '.*', order: 10 },
-            ],
-          },
-        ],
         semi: ['error', 'always'],
       },
     },
