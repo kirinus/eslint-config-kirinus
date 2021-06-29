@@ -59,7 +59,7 @@ jobs:
         git config --global user.email "bot@kirinus.digital"
         git config --global user.name "kirinusbot"
         git add ${{ env.PACKAGE_JSON_FOLDER }}/package.json
-        git commit -m "chore: set package.json version ${{ steps.load_version.outputs.version }}"
+        git commit -m "chore: set package.json version ${{ steps.load_version.outputs.version }}" --no-verify
         git push origin main
     - name: Publish NPM package
       uses: JS-DevTools/npm-publish@v1
