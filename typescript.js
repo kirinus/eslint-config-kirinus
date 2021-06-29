@@ -60,6 +60,7 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-unsafe-call': 'off',
         '@typescript-eslint/no-unsafe-member-access': 'off',
+        'unicorn/no-array-for-each': 'off',
       },
     },
   ],

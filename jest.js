@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
+    'unicorn/no-array-for-each': 'off',
     'jest/expect-expect': [
       'error',
       {

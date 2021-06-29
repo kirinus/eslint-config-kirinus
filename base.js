@@ -39,6 +39,7 @@ module.exports = {
     'no-void': ['error', { allowAsStatement: true }],
     'object-curly-spacing': [2, 'always'],
     semi: ['error', 'always'],
+    'unicorn/no-array-for-each': 'warn',
     'unicorn/no-null': 'warn',
     'unicorn/numeric-separators-style': 'warn',
     'unicorn/prefer-node-protocol': 'warn',
