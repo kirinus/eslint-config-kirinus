@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-kirinus",
-  "version": "1.0.0-rc.5",
+  "version": "1.0.0",
   "description": "Specific kirinus configuration for JavaScript and TypeScript projects",
   "keywords": [
     "eslint",
