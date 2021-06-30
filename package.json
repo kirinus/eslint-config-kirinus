@@ -48,7 +48,7 @@
     "eslint-plugin-import": ">= 2",
     "eslint-plugin-jest": ">= 24",
     "eslint-plugin-jsx-a11y": ">= 6",
-    "eslint-plugin-node": ">= 11",
+    "eslint-plugin-node": ">= 11.1.0",
     "eslint-plugin-ordered-imports": ">= 0.4",
     "eslint-plugin-promise": ">= 5",
     "eslint-plugin-react": ">= 7",
