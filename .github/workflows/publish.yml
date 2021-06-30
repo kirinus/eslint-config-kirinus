@@ -44,6 +44,8 @@ jobs:
           VERSION=${CLEAN_TAG//v}
         fi
         echo "::set-output name=version::$VERSION"
+    - name: Checkout main branch
+      run: git checkout main
     - name: Update package.json version to ${{ steps.load_version.outputs.version }}
       uses: mikefarah/yq@v4.9.0
       with:
