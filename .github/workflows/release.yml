@@ -13,7 +13,7 @@ jobs:
       with:
         draft: true
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
+        withV: true
         taskBaseUrl: null
         taskPrefix: null
         pushTag: false
-        withV: true
