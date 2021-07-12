@@ -23,7 +23,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: 14.17.1
+        node-version: 14.17.3
     - name: Run build
       id: yarn_build
       run: yarn build
@@ -63,7 +63,7 @@ jobs:
     - name: Publish NPM package
       uses: JS-DevTools/npm-publish@v1
       with:
-        access: public
+        access: restricted
         package: ./package.json
-        registry: https://registry.npmjs.org
-        token: ${{ secrets.NPM_PUBLISH_TOKEN }}
+        registry: https://npm.pkg.github.com
+        token: ${{ secrets.GITHUB_TOKEN }}
